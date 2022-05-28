@@ -1,7 +1,17 @@
-.App {
-  text-align: center;
+body{
+  margin: auto;
 }
 
-h1{
-  color: red;
+.form{
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  flex-direction: column;
+  width: 500px;
+ 
+}
+.App{
+  display: flex;
+  justify-content: center;
+  padding-top: 500px;
 }
