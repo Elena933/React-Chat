@@ -1,19 +1,16 @@
 
-
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
 
 export  const Message = (props) => {
     return (
-        <div className={'useUI'} >
-            <div key = {props.id}>
 
-            <div>
-                {props.name }
-            </div>
+            <ListItem>
 
-            <div>
-                {props.author }
-            </div>
-        </div>
-</div>
+            <ListItemText primary={props.name} secondary={props.author}>
+            </ListItemText>
+
+
+</ListItem>
    )
 }
