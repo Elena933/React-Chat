@@ -1,5 +1,5 @@
 body{
-  margin: auto;
+  margin: 0;
 }
 
 .form{
@@ -13,5 +13,18 @@ body{
 .App{
   display: flex;
   justify-content: center;
-  padding-top: 500px;
+  padding-top: 100px;
 }
+.first {
+  color: red;
+  display: flex;
+  justify-content: flex-start;
+}
+.folderList {
+ display: flex;
+  margin-left: 50px;
+}
+.btn {
+height: 55px;
+}
+
