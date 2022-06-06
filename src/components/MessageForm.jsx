@@ -8,10 +8,11 @@ import SendIcon from '@mui/icons-material/Send';
 
 
 export const MessageForm = (props) => {
-    return (<Stack direction={"row"} spacing={2}>
+    return (<Stack direction={"row"}>
         <TextField  value={props.name} onChange={(event)=> props.setName(event.target.value)}/>
-        <Button  variant="contained" endIcon={<SendIcon/>} onClick={()=> props.sendMessage ('user', props.name)}>
+        <Button className={'btn'} variant="contained" endIcon={<SendIcon/>} size={'small'} onClick={()=> props.sendMessage ('user', props.name)}>
             Send
         </Button>
     </Stack>)
 }
+
