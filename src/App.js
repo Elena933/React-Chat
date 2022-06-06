@@ -7,12 +7,17 @@ import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import {MessageForm} from "./components/MessageForm";
 import {Message} from './components/Message'
+import {Chat} from './components/Chat'
+import {ChatList} from "./components/ChatList";
+import {MessageList} from "./components/MessageList";
+
 
 
 
 function App() {
   const [message, setMessage] = useState([])
   const [name, setName] = useState('')
+  // const [chat, setChat] = useState([{name: name, id: Date.now()}])
 
 
   const sendMessage = (author, name)=>{
@@ -43,21 +48,15 @@ function App() {
 
   return (
     <div className='App'>
+      <Stack direction={"row"} spacing={4}>
+        <ChatList></ChatList>
+        <Stack direction={"column"} spacing={2}>
+          <MessageForm name = {name} setName = {setName} sendMessage = {sendMessage}></MessageForm>
 
-      <MessageForm name = {name} setName = {setName} sendMessage = {sendMessage}></MessageForm>
+          <MessageList messages = {message}></MessageList>
+        </Stack>
+      </Stack>
 
-
-
-
-    {message.map((item)=> {
-
-      return (
-        <Message id = {item.id} name = {item.name} author = {item.author} key = {item.id} ></Message>
-
-
-
-      )
-    })}
 
     </div>
   )
